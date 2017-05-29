@@ -7,9 +7,12 @@ module.exports = (()=>{
 
   const perceptron=R.curry((weight,bias,threshold)=>{
     return (array)=>{
-      
+      return C.innerProduct(array,weight)+bias>threshold;
     };
   });
 
+  return {
+    perceptron: perceptron
+  };
   
 })();
