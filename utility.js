@@ -31,7 +31,7 @@ module.exports = (()=>{
     return floatFormat();
   });
 
-  
+
   return {
     copyVector: copyVector,
     intList:intList,
