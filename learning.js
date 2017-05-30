@@ -3,7 +3,7 @@
 module.exports = (()=>{
   const U=require('./utility.js');
   const R=require('ramda');
-  const g=('./gate.js');
+  const g=require('./gate.js');
   
   const learn=()=>{
     console.log(g.andGate([0,1]));

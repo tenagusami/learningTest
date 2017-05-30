@@ -3,14 +3,18 @@
 module.exports = (()=>{
   const U=require('./utility.js');
   const R=require('ramda');
-  const P=('./perceptron.js');
+  const P=require('./perceptron.js');
   
-  const andGate=(input)=>{
-    return P.perceptron([0.5,0.5],0,0.7)(input);
-  };
+  const andGate=P.perceptron([0.5,0.5],-0.7,0);
 
+  const orGate=P.perceptron([0.5,0.5],-0.2,0);
+
+  const nandGate=P.perceptron([-0.5,-0.5],0.7,0);
+  
   return {
-    andGate:andGate
+    andGate:andGate,
+    nandGate:nandGate,
+    orGate:orGate
   };
   
 })();
